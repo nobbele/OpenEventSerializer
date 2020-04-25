@@ -19,6 +19,7 @@ namespace OpenEventSerializer
         }
 
         public void AddAction<T>(string name, Action<T> action) => AddAction(name, action as Delegate);
+        public void AddAction<T, T2>(string name, Action<T, T2> action) => AddAction(name, action as Delegate);
 
         public void CallAction(string name, params object[] args)
         {
